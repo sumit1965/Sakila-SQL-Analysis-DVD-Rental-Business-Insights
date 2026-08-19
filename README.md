@@ -11,7 +11,9 @@ This project answers 8 business questions using raw SQL: joins, subqueries, wind
 ## Schema Overview
 Sakila models a DVD rental store: customers rent films (via `inventory`, which tracks physical copies) from one of two stores, and each rental generates a `payment`. Supporting tables cover actors, categories, staff, and location hierarchy (`address` → `city` → `country`).
 
-![ER Diagram](screenshots/er_diagram.png)
+<img width="1219" height="805" alt="sakila" src="https://github.com/user-attachments/assets/b0b1b993-e58e-4b58-a806-05c59cde573c" />
+
+
 
 ## Business Questions Answered
 1. What are the top 5 highest-revenue films in each category?
@@ -59,8 +61,10 @@ Ran `EXPLAIN` on a filtered query against `payment.amount` before and after addi
 
 ~92% reduction in rows scanned for this filter.
 
-![Before](screenshots/index_before.png)
-![After](screenshots/index_after.png)
+![Before]<img width="900" height="401" alt="Screenshot 2026-08-19 144520" src="https://github.com/user-attachments/assets/a4ec5e5c-13cf-42a9-8428-451c1b8c6fcc" />
+
+![After]<img width="975" height="299" alt="Screenshot 2026-08-19 144557" src="https://github.com/user-attachments/assets/e02316e6-2a6d-4ec8-ad5f-312d17c0ffad" />
+
 
 ## What I'd Do Differently
 - Add indexes proactively based on expected query patterns instead of reactively.
@@ -68,4 +72,5 @@ Ran `EXPLAIN` on a filtered query against `payment.amount` before and after addi
 - Extend the inactivity analysis into a full customer segmentation/cohort model.
 
 ## Author
-[Your name] — [LinkedIn] · [GitHub]
+Sumit Suryavanshi
+sumitsuryavanshi1965@gmail.com
